@@ -1,0 +1,40 @@
+OS Blatt 2 Aufgabe 1
+1a) keiner kommt durch die Ini durch
+1b) A->B->C, weil Ini schafft nur A: 302 -A-> 012 -B-> 103 -C-> 120
+1c) C->B, weil Ini schafft nur C: 003 -C-> 020 -B-> 111 -A-> xxx
+
+OS Blatt 2 Aufgabe 2
+Mutex A, B
+P(A)
+P(B)
+V(A)
+P(A)
+V(A)
+V(B)
+
+P1 Zeile 3: A frei, B hold
+P2 Zeile 2: A hold, B foreign
+P1 Zeile 4: A forign, B hold
+deadlock
+
+OS Blatt 2 Aufgabe 3
+3a) Scheduler gibt nicht-deterministisch Prozessen kurze Zeit, so dass in jeder Sekunde jeder Prozess dran kommt.
+3b) Non-Preemptive: Prozess entscheidet selbst, wann mal wieder ein anderer darf. Prozess kann somit ununterbrochene Bereiche festlegen.
+3b) Preemptive: OS+Prozess dürfen Unterbrechung entscheiden.
+
+OS Blatt 2 Aufgabe 4
+C: Threads
+
+OS Blatt 2 Aufgabe 5
+richtig: D
+A circular wait --> gleich große Aufträge schließen sich evtl gegenseitig aus
+B mutual exclusion --> nur einer darf Drucken.
+D starvation (nur in Theorie) --> irgend ein Depp druckt ständig einzelne Seite
+E (praxis) --> normal
+
+OS Blatt 2 Aufgabe 6
+Falls Prozesse A, B, C genau 1x drankommen:
+Mutex locked S1, S2
+A: exe..., V(S1)
+B: P(S1), exe..., V(S2)
+C: P(S2), exe...
