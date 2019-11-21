@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="blatt1.cpp" />
+    <ClCompile Include="badDiningPhil.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="semaphore.cpp" />
     <ClCompile Include="semaphoren.cpp" />

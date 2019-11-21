@@ -2,16 +2,16 @@
 #include <thread>
 #include <process.h>
 
-int blatt1_1_main();
-int blatt1_2_main();
-int blatt1_3_main();
+int blatt1_1_main(void);
+int blatt1_2_main(void);
+int blatt1_3_main(void);
 int blatt1_P_main(int);
 void parallelFunktion(const int);
 
 volatile int vari;
 volatile int * v_ptr;
 
-int blatt1_1_main() {
+int blatt1_1_main(void) {
 	int eingabe;
 	vari = 7; 
 	v_ptr = &vari;
@@ -58,7 +58,7 @@ void parallelFunktion(const int i) {
 	}
 }
 
-int blatt1_2_main() {
+int blatt1_2_main(void) {
 	std::cout << "Prozesse... " << std::endl;
 	vari = 0; 
 	//TODO Datei suchen
@@ -75,7 +75,7 @@ int blatt1_P_main(int inkrement) {
 	return 0;
 }
 
-int blatt1_3_main() {
+int blatt1_3_main(void) {
 	std::cout << "Threads... " << std::endl;
 	vari = 0;
 	std::thread th1(&parallelFunktion, 1001);

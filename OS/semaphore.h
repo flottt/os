@@ -11,6 +11,7 @@ private:
 public:
 	semaphore(const char * name, const unsigned int initialValue, const unsigned int maxValue);
 	semaphore(const semaphore &) = delete;
+	semaphore(semaphore &&);
 	~semaphore();
 	void wait(unsigned int maxMilliseconds = 10000);
 	void signal();

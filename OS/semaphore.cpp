@@ -21,8 +21,15 @@ semaphore::semaphore(const char * name, const unsigned int initialValue, const u
 }
 
 
+semaphore::semaphore(semaphore && that) {
+	this->s = that.s;
+	that.s = 0;
+}
+
 semaphore::~semaphore() {
-	CloseHandle(this->s);
+	if (this->s != 0) {
+		CloseHandle(this->s);
+	}
 	this->s = 0;
 }
 
