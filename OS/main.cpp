@@ -14,6 +14,9 @@ extern int blatt1_3_main();
 extern int blatt1_P_main(int);
 extern int semapharen_main(void);
 extern int badDiningPhil_main(void);
+extern int blatt3_1_main(void);
+extern int blatt3_1_kunde_main(bool automatisch);
+extern int blatt3_1_lieferant_main(void);
 
 int main(int argc, char ** argv) {
 	int eingabe = 0, returnresult = 0;
@@ -30,6 +33,10 @@ int main(int argc, char ** argv) {
 	std::cout << "13: Blatt 1. Zugriff auf globale Variable ueber mehrere Threads durch Inkrementieren" << std::endl; 
 	std::cout << "20: eigene Semaphoren-Uebung in Windows" << std::endl;
 	std::cout << "21: Dining Philosopher Problem mit Deadlock-Chance" << std::endl;
+	std::cout << "31: Blatt 3. Blumenstraussautomat" << std::endl;
+	std::cout << "32: Blatt 3. Blumenstraussautomat-Kunde automatisch 2 Blumen" << std::endl;
+	std::cout << "33: Blatt 3. Blumenstraussautomat-Kunde manuell" << std::endl;
+	std::cout << "34: Blatt 3. Blumenstraussautomat-Lieferant" << std::endl;
 	std::cout << "Eingabe: "; 
 	std::cin >> eingabe;
 	switch (eingabe) {
@@ -38,6 +45,10 @@ int main(int argc, char ** argv) {
 	case 13: returnresult = blatt1_3_main(); break;
 	case 20: returnresult = semapharen_main(); break;
 	case 21: returnresult = badDiningPhil_main(); break;
+	case 31: returnresult = blatt3_1_main(); break;
+	case 32: returnresult = blatt3_1_kunde_main(true); break;
+	case 33: returnresult = blatt3_1_kunde_main(false); break;
+	case 34: returnresult = blatt3_1_lieferant_main(); break;
 	default:
 		break;
 	}

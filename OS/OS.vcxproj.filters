@@ -30,9 +30,18 @@
     <ClCompile Include="badDiningPhil.cpp">
       <Filter>Ressourcendateien</Filter>
     </ClCompile>
+    <ClCompile Include="blatt3.cpp">
+      <Filter>Ressourcendateien</Filter>
+    </ClCompile>
+    <ClCompile Include="BlumenstraussAutomat.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="semaphore.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="BlumenstraussAutomat.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

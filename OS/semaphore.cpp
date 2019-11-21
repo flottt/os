@@ -43,8 +43,10 @@ void semaphore::wait(unsigned int maxMilliseconds) {
 	}
 }
 
-void semaphore::signal() {
-	if (!ReleaseSemaphore(this->s, 1, NULL)) {
+long semaphore::signal(long count) {
+	long newValue = 0;
+	if (!ReleaseSemaphore(this->s, count, &newValue)) {
 		throw "Semaphoren-Release-Lock";
 	}
+	return newValue + count;
 }

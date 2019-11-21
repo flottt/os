@@ -13,8 +13,8 @@ public:
 	semaphore(const semaphore &) = delete;
 	semaphore(semaphore &&);
 	~semaphore();
-	void wait(unsigned int maxMilliseconds = 10000);
-	void signal();
+	void wait(unsigned int maxMilliseconds = INFINITE);
+	long signal(long count = 1);
 };
 
 #endif //__SEMAPHORE_H__

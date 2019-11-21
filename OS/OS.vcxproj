@@ -117,11 +117,14 @@
   <ItemGroup>
     <ClCompile Include="blatt1.cpp" />
     <ClCompile Include="badDiningPhil.cpp" />
+    <ClCompile Include="blatt3.cpp" />
+    <ClCompile Include="BlumenstraussAutomat.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="semaphore.cpp" />
     <ClCompile Include="semaphoren.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlumenstraussAutomat.h" />
     <ClInclude Include="semaphore.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

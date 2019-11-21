@@ -28,7 +28,7 @@ void warten(int milliseconds, int millisecondsAdd) {
 
 void running(int p) {
 	try {
-		std::srand(std::time(nullptr) + p * 500);
+		std::srand(static_cast<unsigned int>(std::time(nullptr)) + p * 500);
 		std::ostringstream status;
 		status << diningPhil_global_Does << " Phil " << p << " is here " << std::endl;
 		std::cout << status.str();
