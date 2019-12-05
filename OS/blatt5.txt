@@ -1,0 +1,43 @@
+OS Blatt 5 Aufgabe 1: Ziel von Paging:
+ - Jeder Prozess hat den gesamten Speicher-Adressbereich zur Verfügung, auch
+   * wenn der tatsächlich physikalische Speicher kleiner ist,
+   * wenn mehrere Prozesse sich den Speicher teilen
+ - Der Speicherzugriff soll nur minimal länger dauern als ein Direktzugriff
+ - externe Fragmentierung wird gelöst durch interne Fragmentierung
+non-continguous allocation
+ 
+OS Blatt 5 Aufgba 2: Page-size
+ +small: Wenig interne Fragmentierung: Minimaler Speicherbedarf pro Prozess ist geringer
+ +small: Pagesize umkopieren ist einfacher und schneller geladen (heute nicht mehr messbar)
+ +large: Pagetable wird nicht so sehr gross, Multilevel-paging wird notwendig
+ (+large: Speicher ist zusammenhängend, Arrays damit effektiver)
+ +large: weniger Page-faults
+
+OS Blatt 5 Aufgabe 3: interne/externe Fragmentierung
+ interne Fragmentierung: Verlorener Speicher innerhalb der Blöcke. Es wird mehr Speicher reserviert als benötigt. Der zusätlich reservierte Speicher wird als verbraucht betrachtet.
+ externe Fragmentierung: Speicher ist auf viele kleine Fragmente verteilt.
+
+OS Blatt 5 Aufgabe 4: Zeitrechnung
+Direkte Rechnung: 312 MB / 4B * 60ns = 4680 * 2^20 * 10^-9 s = 4,9s
+
+OS Blatt 5 Aufgabe 5:
+a) 12 Bit innerhalb der Page, 20 Bit für Seitentabelle
+
+b)
+Adressbusbreite 32bit, jedes Byte eine Adresse
+ => Adressbereich 4 GB
+page-size 4 kB
+ => 1 M = 2^20 Adressen
+Pagetable-size = 1 M Adressen * 4 B/Adresse = 4 MB
+
+c)
+4GB
+
+OS Blatt 5 Aufgabe 6: TLB
+Content-adressable Memory (associative) zur Beschleunigung des Speicherzugriffs
+Der Translation Lookaside Buffer speichert wenige Adressen direkt, so dass nicht über die Page nachgesehen werden muss.
+
+OS Blatt 5 Aufgabe 7: EAT bei 2-level-paging
+falls Hit: tHit = tSearch + tMem
+falls Miss: tMiss = tSearch + 3 tMem
+tEAT = 90% tHit + 10% tMiss = tSearch + 1,2 tMem = 40 ns + 1,2 * 2000 ns = 2440 ns
