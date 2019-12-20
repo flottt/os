@@ -1,0 +1,35 @@
+Betriebssysteme Blatt 7 Aufgabe 1: FAT with 2 files
+a) 2000 / 512 = 3 Rest 464. Das gesuchte Byte befindet sich im vierten Block: A -> 2 -> 12 -> 6 -> 16, also ich Block #16 an der Position 464 (begonnen bei 1).
+
+b) B -> 9 -> 1 -> 15 -> 10 -> 3 -> 11 -> -1. Der letzte Block von File B ist Block #11.
+
+c) B -> ... -> 15 -> 10 -> ... Die FAT muss abgearbeitet werden. Antwort: Block #15.
+
+
+Betriebssysteme Blatt 7 Aufgabe 2: FAT Blöcke zusammenhängend
+A -> falsch
+B -> wahr
+C -> falsch
+
+
+Betriebssysteme Blatt 7 Aufgabe 3:
+B: random access
+
+
+Betriebssysteme Blatt 7 Aufgabe 4:
+einfacher: nur start und länge
+
+
+Betriebssysteme Blatt 7 Aufgabe 5:
+a)
+10 Direkte Blöcke: 10 kB Content
+1 1fach-indirekter Block: 256 Adressen => 256 kB Content
+1 2fach-indirekter Block: 256² Adressen => 256² kB Content
+maximale Dateigröße: 65.802 kB = 64, MB
+
+b) Direktblöcke reichen nicht, aber 1fach-indirekt-Block reicht => 2 Verwaltungsblöcke
+
+c) 16 GB / 1kB = 16 M = 2^24 Adressen, 24 Bit pro Adresse nötig, also 3 Byte. FAT hat 3 * 16 MB = 48 MB
+
+d) inodes. Die Direktblöcke reichen aus. Nur ein Block pro File.
+Beispiel 100 kleine Files: inodes: 100 kB Verwaltung, FAT braucht immer komplette Tabelle 48 MB.
